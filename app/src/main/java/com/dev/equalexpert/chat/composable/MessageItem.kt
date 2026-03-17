@@ -12,9 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.dev.equalexpert.data.Message
-import com.dev.equalexpert.data.Message.MyMessage
-import com.dev.equalexpert.data.Message.OthersMessage
+import com.dev.equalexpert.chat.data.Message
+import com.dev.equalexpert.chat.data.Message.MyMessage
+import com.dev.equalexpert.chat.data.Message.OthersMessage
 
 @Composable
 fun MessageItem(message: Message) {

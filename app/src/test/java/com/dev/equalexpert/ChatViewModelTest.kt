@@ -1,6 +1,6 @@
 package com.dev.equalexpert
 
-import com.dev.equalexpert.data.Message.MyMessage
+import com.dev.equalexpert.chat.data.Message.MyMessage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first

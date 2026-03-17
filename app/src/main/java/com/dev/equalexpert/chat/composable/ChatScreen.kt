@@ -10,8 +10,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dev.equalexpert.ChatViewModel
 import com.dev.equalexpert.ChatViewModelFactory
-import com.dev.equalexpert.data.Message.MyMessage
-import com.dev.equalexpert.data.Message.OthersMessage
+import com.dev.equalexpert.chat.data.Message.MyMessage
+import com.dev.equalexpert.chat.data.Message.OthersMessage
 
 
 @Composable
@@ -22,13 +22,15 @@ fun ChatScreen(
     Column(modifier.fillMaxSize()) {
         MessageList(
             modifier = Modifier.weight(1f),
-            messages = chatViewModel.messages
+            messages = chatViewModel.messages,
+            onDeleteMessage = {  }
         )
         MessageInput(
             modifier = Modifier
                 .fillMaxWidth(),
             onMessageSent = { message ->
-                chatViewModel.sendMessage(message)
+                    chatViewModel.sendMessage(message)
+
             }
         )
     }

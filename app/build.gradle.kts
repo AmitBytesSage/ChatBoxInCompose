@@ -1,11 +1,15 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization")
 }
 
 android {
     namespace = "com.dev.equalexpert"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dev.equalexpert"
@@ -62,7 +66,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.compose)
-
+    implementation(libs.androidx.lifecycle.runtime.compose.android)
+    implementation(libs.ktor.client.json)
+    implementation(libs.ktor.client.serialization)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.core)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.kotlin.serialization)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.ui.test.junit4)
